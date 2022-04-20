@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fruity Facts</string>
+    <string name="lblFruityFacts">Fruity Facts!</string>
+    <string name="lblSelectFruitBy">Select Fruit by</string>
+    <string name="btnName">Name</string>
+    <string name="btnNutritionalValue">Nutritional Value</string>
 </resources>
