@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fruitarray">
+        <item>Apple</item>
+        <item>Apricot</item>
+        <item>Banana</item>
+        <item>Blackbery</item>
+        <item>Blueberry</item>
+        <item>Cherry</item>
+        <item>Durian</item>
+        <item>Fig</item>
+        <item>Gooseberry</item>
+        <item>Grapes</item>
+        <item>Green Apple</item>
+        <item>Guava</item>
+        <item>Kiwi</item>
+        <item>Lemon</item>
+        <item>Lime</item>
+        <item>Lingonberry</item>
+        <item>Lychee</item>
+        <item>Mango</item>
+        <item>Melon</item>
+        <item>Orange</item>
+        <item>Papaya</item>
+        <item>Passion Fruit</item>
+        <item>Pear</item>
+        <item>Persimmon</item>
+        <item>Pineapple</item>
+        <item>Plum</item>
+        <item>Raspberry</item>
+        <item>Strawberry</item>
+        <item>Tomato</item>
+        <item>Umbu</item>
+        <item>Watermelon</item>
+    </string-array>
+</resources>
