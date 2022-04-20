@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fruityfacts.R
+import com.example.fruityfacts.data.Fruit
 
-class AllFruitAdapter(val context: Context,
-                      private val dataset: List<Fruit>):
+class AllFruitAdapter(val context: Context):
     RecyclerView.Adapter<AllFruitAdapter.ItemViewHolder>()
 {
-    val fruitArray = context.resources.getStringArray(R.array.fruitarray).toList()
+    val fruitCollection = context.resources.getStringArray(R.array.fruitcollection).toList()
 
 
     class ItemViewHolder (val view: View) :
@@ -29,9 +29,9 @@ class AllFruitAdapter(val context: Context,
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val item = dataset[position]
+        val item = fruitCollection[position]
         val context = holder.view.context
-        holder.button.text = item
+        holder.button.text = item.toString()
 
         holder.button.setOnClickListener {
             //***** set up SingleFRuitActivity *********
@@ -42,6 +42,6 @@ class AllFruitAdapter(val context: Context,
         }
     }
 
-    override fun getItemCount(): Int = dataset.size
+    override fun getItemCount(): Int = fruitCollection.size
 
 }

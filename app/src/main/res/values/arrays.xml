@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="fruitarray">
+    <string-array name="fruitcollection">
         <item>Apple</item>
         <item>Apricot</item>
         <item>Banana</item>
