@@ -21,5 +21,6 @@ class MainActivity : AppCompatActivity() {
             val filterFruitIntent = Intent(this, FilterFruitActivity::class.java)
             startActivity(filterFruitIntent)
         }
+        
     }
 }
