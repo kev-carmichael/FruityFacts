@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         //DO SAME FOR NUTRITION VAL BTN
-
         
     }
 }
