@@ -30,7 +30,7 @@ class AllFruitAdapter(val context: Context):
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = fruitCollection[position]
-        val context = holder.view.context
+        val context = holder.view.context //will be used ba setOnClickListener
         holder.button.text = item.toString()
 
         holder.button.setOnClickListener {
