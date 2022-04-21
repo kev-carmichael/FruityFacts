@@ -4,4 +4,5 @@
     <string name="lblSelectFruitBy">Select Fruit by</string>
     <string name="btnName">Name</string>
     <string name="btnNutritionalValue">Nutritional Value</string>
+    <string name="btnMoreInfo">More Info</string>
 </resources>
