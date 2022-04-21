@@ -5,4 +5,10 @@
     <string name="btnName">Name</string>
     <string name="btnNutritionalValue">Nutritional Value</string>
     <string name="btnMoreInfo">More Info</string>
+    <string name="lblSelectValues">Select nutritional values for fruit per 100g</string>
+    <string name="lblCarbohydrates">Carbohydrates</string>
+    <string name="lblProtein">Protein</string>
+    <string name="lblFat">Fat</string>
+    <string name="lblCalories">Calories</string>
+    <string name="lblSugar">Sugar</string>
 </resources>

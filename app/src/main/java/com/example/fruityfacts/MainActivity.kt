@@ -12,13 +12,13 @@ class MainActivity : AppCompatActivity() {
 
         val btnName: Button = findViewById(R.id.btnName)
         btnName.setOnClickListener {
-            val allFruitIntent: Intent = Intent(this, AllFruitActivity::class.java)
+            val allFruitIntent = Intent(this, AllFruitActivity::class.java)
             startActivity(allFruitIntent)
         }
 
         val btnNutritionalValue: Button = findViewById(R.id.btnNutritionalValue)
-        btnName.setOnClickListener {
-            val filterFruitIntent: Intent = Intent(this, FilterFruitActivity::class.java)
+        btnNutritionalValue.setOnClickListener {
+            val filterFruitIntent = Intent(this, FilterFruitActivity::class.java)
             startActivity(filterFruitIntent)
         }
     }

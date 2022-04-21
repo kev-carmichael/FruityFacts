@@ -33,4 +33,5 @@
         <item>Umbu</item>
         <item>Watermelon</item>
     </string-array>
+    <string-array name="initial_slider_values" />
 </resources>
