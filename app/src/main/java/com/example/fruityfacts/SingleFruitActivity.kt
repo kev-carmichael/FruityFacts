@@ -19,7 +19,8 @@ class SingleFruitActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_fruit)
-        val fruitId = intent?.extras?.getString(SINGLEFRUIT).toString()
+        val fruitId = intent?.extras?.getString(SINGLEFRUIT)
+            .toString().replace("\\s".toRegex(),"")
 
         val btnMoreInfo: Button = findViewById(R.id.btnMoreInfo)
         btnMoreInfo.setOnClickListener {

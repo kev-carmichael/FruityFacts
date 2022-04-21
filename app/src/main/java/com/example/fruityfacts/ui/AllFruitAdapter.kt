@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fruityfacts.R
+import com.example.fruityfacts.SingleFruitActivity
 import com.example.fruityfacts.data.Fruit
 
 class AllFruitAdapter(val context: Context):
@@ -34,11 +35,9 @@ class AllFruitAdapter(val context: Context):
         holder.button.text = item.toString()
 
         holder.button.setOnClickListener {
-            //***** set up SingleFRuitActivity *********
-            //val intent = Intent(context, SingleFruitActivity::class.java)
-            //intent.putExtra(SingleFruitActivity.FRUIT, holder.button.text)
-            //context.startActivity(intent)
-            //*****                             ********
+            val intent = Intent(context, SingleFruitActivity::class.java)
+            intent.putExtra(SingleFruitActivity.SINGLEFRUIT, holder.button.text)
+            context.startActivity(intent)
         }
     }
 
