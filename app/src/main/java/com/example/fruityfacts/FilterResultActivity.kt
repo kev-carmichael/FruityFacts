@@ -18,6 +18,12 @@ class FilterResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter_result)
 
+
+        val minValue: TextView = findViewById(R.id.minValue)
+
+        minValue.text = "Min value: ${intent?.extras?.getString("MIN")}"
+
+
     }
 
 
