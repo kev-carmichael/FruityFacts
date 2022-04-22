@@ -8,4 +8,8 @@ import retrofit2.http.Path
 interface FruitService {
     @GET("{Id}")
     fun getFruit(@Path("Id") Id: String): Call<Fruit>
+
+    @GET("all")
+    fun getAllFruit(): List<Fruit>
+
 }
