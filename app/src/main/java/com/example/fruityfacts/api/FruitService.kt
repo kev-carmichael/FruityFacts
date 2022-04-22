@@ -10,6 +10,6 @@ interface FruitService {
     fun getFruit(@Path("Id") Id: String): Call<Fruit>
 
     @GET("all")
-    fun getAllFruit(): List<Fruit>
+    fun getAllFruit(): Call<List<Fruit>>
 
 }
