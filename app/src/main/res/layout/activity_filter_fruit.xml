@@ -92,19 +92,16 @@
         app:layout_constraintTop_toBottomOf="@id/sldrCalories"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    
+
     <TextView
         android:id="@+id/lblCarbohydrates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/lblCarbohydrates"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBaseline_toBaselineOf="@id/sldrCarbohydrates" />
-
-
-
-
+        app:layout_constraintTop_toTopOf="@id/sldrCarbohydrates" />
 
     <TextView
         android:id="@+id/lblProtein"
@@ -114,7 +111,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/lblProtein"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblCarbohydrates" />
+        app:layout_constraintTop_toTopOf="@id/sldrProtein" />
 
     <TextView
         android:id="@+id/lblFat"
@@ -123,9 +120,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/lblFat"
-        app:layout_constraintVertical_weight="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblProtein" />
+        app:layout_constraintTop_toTopOf="@id/sldrFat" />
 
     <TextView
         android:id="@+id/lblCalories"
@@ -135,7 +131,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/lblCalories"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblFat" />
+        app:layout_constraintTop_toTopOf="@id/sldrCalories" />
 
     <TextView
         android:id="@+id/lblSugar"
@@ -145,7 +141,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/lblSugar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblCalories" />
+        app:layout_constraintTop_toTopOf="@id/sldrSugar" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/verticalguideline"
