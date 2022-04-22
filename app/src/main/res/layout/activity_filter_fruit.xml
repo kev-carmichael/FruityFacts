@@ -17,15 +17,93 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sldrCarbohydrates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:stepSize="10.0"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:values="@array/initial_slider_values"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/lblSelectValues"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sldrProtein"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:stepSize="10.0"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:values="@array/initial_slider_values"
+        app:layout_constraintStart_toEndOf="@id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/sldrCarbohydrates"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sldrFat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:stepSize="10.0"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:values="@array/initial_slider_values"
+        app:layout_constraintStart_toEndOf="@id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/sldrProtein"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sldrCalories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:stepSize="10.0"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:values="@array/initial_slider_values"
+        app:layout_constraintStart_toEndOf="@id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/sldrFat"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sldrSugar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:stepSize="10.0"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:values="@array/initial_slider_values"
+        app:layout_constraintStart_toEndOf="@id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/sldrCalories"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <TextView
         android:id="@+id/lblCarbohydrates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="@string/lblCarbohydrates"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lblSelectValues" />
+        app:layout_constraintBaseline_toBaselineOf="@id/sldrCarbohydrates" />
+
+
+
+
 
     <TextView
         android:id="@+id/lblProtein"
@@ -69,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lblCalories" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical"
+        android:id="@+id/verticalguideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
