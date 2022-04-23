@@ -31,7 +31,6 @@ class FilterResultActivity : AppCompatActivity() {
                 " Max Calories: ${intent?.extras?.getString("MAXCALORIES")}, " +
                 " Min Sugar= ${intent?.extras?.getString("MINSUGAR")}, " +
                 " Max Sugar: ${intent?.extras?.getString("MAXSUGAR")}, ";
-
          */
     }
     
