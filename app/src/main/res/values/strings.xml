@@ -11,4 +11,5 @@
     <string name="lblFat">Fat</string>
     <string name="lblCalories">Calories</string>
     <string name="lblSugar">Sugar</string>
+    <string name="btnFindFruit">Find Fruit</string>
 </resources>
