@@ -19,9 +19,10 @@ class FilterResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_filter_result)
 
 
-        val minValue: TextView = findViewById(R.id.minValue)
+        val output: TextView = findViewById(R.id.output)
 
-        minValue.text = "Min value: ${intent?.extras?.getString("MIN")}"
+        output.text = "Min = ${intent?.extras?.getString("MINCARBS")}, " +
+                "Max: ${intent?.extras?.getString("MAXCARBS")}";
 
 
     }
