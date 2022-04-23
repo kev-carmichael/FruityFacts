@@ -18,7 +18,7 @@ class FilterResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter_result)
 
-
+        /* FOR TESTING TO SHOW INTENT FROM SLIDERS RECEIVED
         val output: TextView = findViewById(R.id.output)
 
         output.text = "Min Carbs= ${intent?.extras?.getString("MINCARBS")}, " +
@@ -31,9 +31,10 @@ class FilterResultActivity : AppCompatActivity() {
                 " Max Calories: ${intent?.extras?.getString("MAXCALORIES")}, " +
                 " Min Sugar= ${intent?.extras?.getString("MINSUGAR")}, " +
                 " Max Sugar: ${intent?.extras?.getString("MAXSUGAR")}, ";
+
+         */
     }
-
-
+    
     private fun loadData(fruitId: String) {
         val service  = ServiceBuilder.buildService(FruitService::class.java)
         val requestCall = service.getAllFruit()
