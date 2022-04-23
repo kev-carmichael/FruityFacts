@@ -21,10 +21,16 @@ class FilterResultActivity : AppCompatActivity() {
 
         val output: TextView = findViewById(R.id.output)
 
-        output.text = "Min = ${intent?.extras?.getString("MINCARBS")}, " +
-                "Max: ${intent?.extras?.getString("MAXCARBS")}";
-
-
+        output.text = "Min Carbs= ${intent?.extras?.getString("MINCARBS")}, " +
+                " Max Carbs: ${intent?.extras?.getString("MAXCARBS")}, " +
+                " Min Protein= ${intent?.extras?.getString("MINPROTEIN")}, " +
+                " Max Protein: ${intent?.extras?.getString("MAXPROTEIN")}, " +
+                " Min Fat= ${intent?.extras?.getString("MINFAT")}, " +
+                " Max Fat: ${intent?.extras?.getString("MAXFAT")}, " +
+                " Min Calories= ${intent?.extras?.getString("MINCALORIES")}, " +
+                " Max Calories: ${intent?.extras?.getString("MAXCALORIES")}, " +
+                " Min Sugar= ${intent?.extras?.getString("MINSUGAR")}, " +
+                " Max Sugar: ${intent?.extras?.getString("MAXSUGAR")}, ";
     }
 
 
