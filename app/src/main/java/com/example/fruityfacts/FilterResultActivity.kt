@@ -8,10 +8,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.RecyclerView
 import com.example.fruityfacts.api.FruitService
 import com.example.fruityfacts.api.ServiceBuilder
 import com.example.fruityfacts.data.Fruit
 import com.example.fruityfacts.data.FruitImages
+import com.example.fruityfacts.ui.AllFruitAdapter
+import com.example.fruityfacts.ui.FilterResultAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -20,6 +23,8 @@ class FilterResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter_result)
+        loadData()
+
 
         /* FOR TESTING TO SHOW INTENT FROM SLIDERS RECEIVED
         val output: TextView = findViewById(R.id.output)
@@ -38,7 +43,7 @@ class FilterResultActivity : AppCompatActivity() {
          */
     }
     
-    private fun loadData(fruitId: String) {
+    private fun loadData() {
         val service  = ServiceBuilder.buildService(FruitService::class.java)
         val requestCall = service.getAllFruit()
         requestCall.enqueue(object : Callback<List<Fruit>> {
@@ -47,17 +52,16 @@ class FilterResultActivity : AppCompatActivity() {
             ) {
 
                 if (response.isSuccessful){
-
-                    val txtName : TextView = findViewById(R.id.txtName)
-                    val txtId : TextView = findViewById(R.id.txtId)
-                    val txtCalories: TextView = findViewById(R.id.txtCalories)
-                    val imgFruit: ImageView = findViewById(R.id.imgFruit)
                     //process data
-                    val fruitList: List<Fruit>  = response.body()!!
-                    txtName.text = fruitList.find{it.name==fruitId}!!.name
-                    txtId.text = fruitList.find{it.name==fruitId}!!.id.toString()
-                    txtCalories.text = fruitList.find{it.name==fruitId}!!.nutritions.calories.toString()
-                    FruitImages().fruitMap.get(fruitList.find{it.name==fruitId}!!.id)?.let { imgFruit.setImageResource(it) }
+                    val recyclerView: RecyclerView = findViewById(R.id.recycler_filter_result)
+                    recyclerView.adapter = FilterResultAdapter(response.body()!!)
+
+
+                    //val fruitList: List<Fruit>  = response.body()!!
+                    //txtName.text = fruitList.find{it.name==fruitId}!!.name
+                    //txtId.text = fruitList.find{it.name==fruitId}!!.id.toString()
+                    //txtCalories.text = fruitList.find{it.name==fruitId}!!.nutritions.calories.toString()
+                    //FruitImages().fruitMap.get(fruitList.find{it.name==fruitId}!!.id)?.let { imgFruit.setImageResource(it) }
 
                 }else{
                     //output alert
