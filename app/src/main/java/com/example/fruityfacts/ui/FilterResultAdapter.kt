@@ -38,7 +38,7 @@ class FilterResultAdapter (val fruitList: List<Fruit>):
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val adapterlayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.activity_single_fruit, parent, false)
+            .inflate(R.layout.fruit_recycler_layout, parent, false)
 
         return ItemViewHolder(adapterlayout)
     }
