@@ -20,7 +20,7 @@ class FilterFruitActivity : AppCompatActivity() {
         btnFindFruit.setOnClickListener {
             val minCalories: Float = calorieValues[0]
             val maxCalories: Float = calorieValues[1]
-            
+
             val intent = Intent(this, FilterResultActivity::class.java).apply{
                 putExtra("MINCALORIES", minCalories.toString())
                 putExtra("MAXCALORIES", maxCalories.toString())
