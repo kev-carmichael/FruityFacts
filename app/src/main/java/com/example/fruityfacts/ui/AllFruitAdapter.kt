@@ -15,6 +15,7 @@ class AllFruitAdapter(val context: Context):
     RecyclerView.Adapter<AllFruitAdapter.ItemViewHolder>()
 {
     val fruitCollection = context.resources.getStringArray(R.array.fruitcollection).toList()
+    //MUST USE API NAMES INSTEAD
 
 
     class ItemViewHolder (val view: View) :
