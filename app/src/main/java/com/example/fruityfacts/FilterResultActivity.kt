@@ -19,6 +19,7 @@ class FilterResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_filter_result)
         loadData()
     }
+    
     private fun loadData() {
         val service  = ServiceBuilder.buildService(FruitService::class.java)
         val requestCall = service.getAllFruit()
