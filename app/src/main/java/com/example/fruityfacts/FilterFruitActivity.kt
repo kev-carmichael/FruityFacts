@@ -22,8 +22,8 @@ class FilterFruitActivity : AppCompatActivity() {
             val maxCalories: Float = calorieValues[1]
 
             val intent = Intent(this, FilterResultActivity::class.java).apply{
-                putExtra("MINCALORIES", minCalories.toString())
-                putExtra("MAXCALORIES", maxCalories.toString())
+                putExtra("MINCALORIES", minCalories.toInt())//removed .toString()
+                putExtra("MAXCALORIES", maxCalories.toInt())//removed .toString()
             }
 
             startActivity(intent)
