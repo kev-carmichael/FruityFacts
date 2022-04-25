@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fruityfacts.api.FruitService
 import com.example.fruityfacts.api.ServiceBuilder
 import com.example.fruityfacts.data.Fruit
+import com.example.fruityfacts.ui.FilterResultAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
