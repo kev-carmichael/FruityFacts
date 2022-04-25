@@ -14,25 +14,48 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class FilterResultActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter_result)
         loadData()
     }
+<<<<<<< HEAD
     
+||||||| a959463
+=======
+
+    //WILL THIS WORK?????????????????????????????
+    val filteredList: MutableList<Fruit> =  ArrayList<Fruit>()
+
+
+>>>>>>> filterCode
     private fun loadData() {
+
         val service  = ServiceBuilder.buildService(FruitService::class.java)
         val requestCall = service.getAllFruit()
+
 
         requestCall.enqueue(object : Callback<List<Fruit>> {
             override fun onResponse(call: Call<List<Fruit>>,
                                     response: Response<List<Fruit>>
             ) {
+
+
                 if (response.isSuccessful){
+                    // IT WORKS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    //filter data
+
+                    for (item: Fruit in response.body()!!) {
+                        if(item.nutritions.calories < intent?.extras?.getInt("MAXCALORIES")!!){
+                            filteredList.add(item)
+                        }
+                    }
+
                     //process data
                     val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
                     recyclerView.layoutManager = GridLayoutManager(this@FilterResultActivity,2)
-                    recyclerView.adapter = FilterResultAdapter(response.body()!!)
+                    recyclerView.adapter = FilterResultAdapter(filteredList) //was FilterResultAdapter(response.body()!!)
 
                 }else{
                     //output alert
@@ -56,4 +79,5 @@ class FilterResultActivity : AppCompatActivity() {
         })
     }
 
+    
 }

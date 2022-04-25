@@ -11,6 +11,10 @@ import com.example.fruityfacts.data.Fruit
 
 class FilterResultAdapter (private val fruitList: List<Fruit>) :
     RecyclerView.Adapter<FilterResultAdapter.ViewHolder>() {
+
+    //******android is not expecting intent?. here - it belongs in an activity, so
+    //******need to filter there? - TRIED, DIDNT WORK
+
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val txtNameRecycler: TextView = view.findViewById(R.id.txtNameRecycler)
         val txtCaloriesRecycler: TextView = view.findViewById(R.id.txtCaloriesRecycler)
@@ -26,7 +30,7 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val theFruit = fruitList.get(position)
+        val theFruit = fruitList.get(position)  //changed from fruitList.get(position)
         holder.txtNameRecycler.text = "Name: " + theFruit.name
         holder.txtCaloriesRecycler.text = "Calories: " + theFruit.nutritions.calories.toString()
         //Picasso.get().load(theCountry
