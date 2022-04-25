@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FruityFacts">
         <activity
-            android:name=".FilterFruitActivity"
+            android:name=".FilterResultActivity"
             android:exported="false" />
         <activity
-            android:name=".FilterResultActivity"
+            android:name=".FilterFruitActivity"
             android:exported="false" />
         <activity
             android:name=".SingleFruitActivity"
