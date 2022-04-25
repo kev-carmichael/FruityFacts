@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         val btnNutritionalValue: Button = findViewById(R.id.btnNutritionalValue)
-        btnNutritionalValue.setOnClickListener {
+        /*btnNutritionalValue.setOnClickListener {
             val filterFruitIntent = Intent(this, FilterFruitActivity::class.java)
             startActivity(filterFruitIntent)
-        }
+        }*/
         
     }
     
