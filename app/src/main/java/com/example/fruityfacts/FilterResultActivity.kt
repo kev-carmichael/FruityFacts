@@ -20,16 +20,11 @@ class FilterResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_filter_result)
         loadData()
     }
-<<<<<<< HEAD
-    
-||||||| a959463
-=======
 
     //WILL THIS WORK?????????????????????????????
     val filteredList: MutableList<Fruit> =  ArrayList<Fruit>()
 
 
->>>>>>> filterCode
     private fun loadData() {
 
         val service  = ServiceBuilder.buildService(FruitService::class.java)
@@ -79,5 +74,5 @@ class FilterResultActivity : AppCompatActivity() {
         })
     }
 
-    
+
 }
