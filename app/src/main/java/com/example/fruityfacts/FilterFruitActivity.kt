@@ -10,11 +10,11 @@ class FilterFruitActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter_fruit)
 
-        /*val btnFindFruit: Button = findViewById(R.id.btnFindFruit)
+        val btnFindFruit: Button = findViewById(R.id.btnFindFruit)
         btnFindFruit.setOnClickListener {
             val intent = Intent(this, FilterResultActivity::class.java)
             startActivity(intent)
 
-        }*/
+        }
     }
 }
