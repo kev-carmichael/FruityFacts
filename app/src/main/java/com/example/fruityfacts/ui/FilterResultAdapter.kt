@@ -12,8 +12,8 @@ import com.example.fruityfacts.data.Fruit
 class FilterResultAdapter (private val fruitList: List<Fruit>) :
     RecyclerView.Adapter<FilterResultAdapter.ViewHolder>() {
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
-        val txtName: TextView = view.findViewById(R.id.txtNameRecycler)
-        val txtCalories: TextView = view.findViewById(R.id.txtCaloriesRecycler)
+        val txtNameRecycler: TextView = view.findViewById(R.id.txtNameRecycler)
+        val txtCaloriesRecycler: TextView = view.findViewById(R.id.txtCaloriesRecycler)
     }
 
     override fun getItemCount() = fruitList.size
@@ -27,8 +27,8 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val theFruit = fruitList.get(position)
-        holder.txtName.text = "Name: " + theFruit.name
-        holder.txtCalories.text = "Calories: " + theFruit.nutritions.calories.toString()
+        holder.txtNameRecycler.text = "Name: " + theFruit.name
+        holder.txtCaloriesRecycler.text = "Calories: " + theFruit.nutritions.calories.toString()
         //Picasso.get().load(theCountry
         //.countryInfo.flag).into(holder.imgFlag)
     }
