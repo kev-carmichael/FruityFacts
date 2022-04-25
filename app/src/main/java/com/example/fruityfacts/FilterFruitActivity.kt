@@ -41,7 +41,7 @@ class FilterFruitActivity : AppCompatActivity() {
             val minSugar: Float = sugarValues[0]
             val maxSugar: Float = sugarValues[1]
 
-            val intent: Intent = Intent(this, FilterResultActivity::class.java).apply{
+            val intent = Intent(this, FilterResultActivity::class.java).apply{
                 putExtra("MINCARBS", minCarbs.toString())
                 putExtra("MAXCARBS", maxCarbs.toString())
                 putExtra("MINPROTEIN", minProtein.toString())

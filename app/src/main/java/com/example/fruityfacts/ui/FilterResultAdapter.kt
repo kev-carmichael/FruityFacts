@@ -25,7 +25,7 @@ class FilterResultAdapter (val fruitList: List<Fruit>):
 
     class ItemViewHolder (val view: View) :
         RecyclerView.ViewHolder(view){
-        val imgFruit: ImageView = view.findViewById<ImageView>(R.id.imgFruit)
+        val imgFruit = view.findViewById<ImageView>(R.id.imgFruit)
         val txtName = view.findViewById<TextView>(R.id.txtName)
         val txtId = view.findViewById<TextView>(R.id.txtId)
         val txtCalories = view.findViewById<TextView>(R.id.txtCalories)

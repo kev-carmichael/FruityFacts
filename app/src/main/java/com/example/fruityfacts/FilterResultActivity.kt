@@ -1,19 +1,13 @@
 package com.example.fruityfacts
 
-import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fruityfacts.api.FruitService
 import com.example.fruityfacts.api.ServiceBuilder
 import com.example.fruityfacts.data.Fruit
-import com.example.fruityfacts.data.FruitImages
-import com.example.fruityfacts.ui.AllFruitAdapter
 import com.example.fruityfacts.ui.FilterResultAdapter
 import retrofit2.Call
 import retrofit2.Callback
@@ -55,6 +49,9 @@ class FilterResultActivity : AppCompatActivity() {
                     //process data
                     val recyclerView: RecyclerView = findViewById(R.id.recycler_filter_result)
                     recyclerView.adapter = FilterResultAdapter(response.body()!!)
+                    //DO WE NEED THIS???????????????????????????????
+                    recyclerView.layoutManager = GridLayoutManager(this@FilterResultActivity,1)
+
 
 
                     //val fruitList: List<Fruit>  = response.body()!!
