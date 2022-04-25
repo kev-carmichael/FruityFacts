@@ -19,7 +19,6 @@ class FilterResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_filter_result)
         loadData()
 
-
         /* FOR TESTING TO SHOW INTENT FROM SLIDERS RECEIVED
         val output: TextView = findViewById(R.id.output)
 
