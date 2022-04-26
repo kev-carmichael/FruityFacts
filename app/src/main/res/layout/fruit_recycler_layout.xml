@@ -41,6 +41,18 @@
         android:layout_marginEnd="8dp"/>
 
     <TextView
+        android:id="@+id/txtFatRecycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRecycler"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtProteinRecycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+
+    <TextView
         android:id="@+id/txtCaloriesRecycler"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -49,7 +61,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineRecycler"
-        app:layout_constraintTop_toBottomOf="@+id/txtProteinRecycler" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFatRecycler" />
 
     <ImageView
         android:id="@+id/imgFruitRecycler"
