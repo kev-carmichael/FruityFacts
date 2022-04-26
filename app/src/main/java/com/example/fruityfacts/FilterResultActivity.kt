@@ -45,7 +45,9 @@ class FilterResultActivity : AppCompatActivity() {
                             item.nutritions.carbohydrates.toFloat() < intent?.extras?.getFloat("MAXCARBS")!!&&
                             item.nutritions.carbohydrates.toFloat() > intent?.extras?.getFloat("MINCARBS")!!&&
                             item.nutritions.protein.toFloat() < intent?.extras?.getFloat("MAXPROTEIN")!!&&
-                            item.nutritions.protein.toFloat() > intent?.extras?.getFloat("MINPROTEIN")!!){
+                            item.nutritions.protein.toFloat() > intent?.extras?.getFloat("MINPROTEIN")!!&&
+                            item.nutritions.fat.toFloat() < intent?.extras?.getFloat("MAXFAT")!!&&
+                            item.nutritions.fat.toFloat() > intent?.extras?.getFloat("MINFAT")!!){
                             filteredList.add(item)
                         }
                     }

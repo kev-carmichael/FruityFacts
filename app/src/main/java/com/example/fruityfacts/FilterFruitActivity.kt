@@ -11,6 +11,7 @@ class FilterFruitActivity : AppCompatActivity() {
     var calorieValues: List<Float> = listOf(0.0f, 100.0f)
     var carbValues: List<Float> = listOf(0.0f, 100.0f)
     var proteinValues: List<Float> = listOf(0.0f, 100.0f)
+    var fatValues: List<Float> = listOf(0.0f, 100.0f)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +25,8 @@ class FilterFruitActivity : AppCompatActivity() {
             val maxCarbs: Float = carbValues[1]
             val minProtein: Float = proteinValues[0]
             val maxProtein: Float = proteinValues[1]
-
-
+            val minFat: Float = fatValues[0]
+            val maxFat: Float = fatValues[1]
             val minCalories: Float = calorieValues[0]
             val maxCalories: Float = calorieValues[1]
 
@@ -35,6 +36,8 @@ class FilterFruitActivity : AppCompatActivity() {
                 putExtra("MAXCARBS", maxCarbs)
                 putExtra("MINPROTEIN", minProtein)
                 putExtra("MAXPROTEIN", maxProtein)
+                putExtra("MINFAT", minFat)
+                putExtra("MAXFAT", maxFat)
                 putExtra("MINCALORIES", minCalories.toInt())//removed .toString()
                 putExtra("MAXCALORIES", maxCalories.toInt())//removed .toString()
 
@@ -72,6 +75,20 @@ class FilterFruitActivity : AppCompatActivity() {
         })
         sldrProtein.addOnChangeListener { slider, value, fromUser ->
             proteinValues = sldrProtein.values
+        }
+
+        val sldrFat: RangeSlider = findViewById(R.id.sldrFat)
+
+        sldrFat.addOnSliderTouchListener(object : RangeSlider.OnSliderTouchListener {
+            @SuppressLint("RestrictedApi")
+            override fun onStartTrackingTouch(slider: RangeSlider) {
+            }
+            @SuppressLint("RestrictedApi")
+            override fun onStopTrackingTouch(slider: RangeSlider) {
+            }
+        })
+        sldrFat.addOnChangeListener { slider, value, fromUser ->
+            fatValues = sldrFat.values
         }
 
 
