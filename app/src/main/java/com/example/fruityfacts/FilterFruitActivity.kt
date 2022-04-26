@@ -9,6 +9,7 @@ import com.google.android.material.slider.RangeSlider
 
 class FilterFruitActivity : AppCompatActivity() {
     var calorieValues: List<Float> = listOf(0.0f, 100.0f)
+    var carbValues: List<Float> = listOf(0.0f, 100.0f)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,10 +21,15 @@ class FilterFruitActivity : AppCompatActivity() {
         btnFindFruit.setOnClickListener {
             val minCalories: Float = calorieValues[0]
             val maxCalories: Float = calorieValues[1]
+            val minCarbs: Float = carbValues[0]
+            val maxCarbs: Float = carbValues[1]
 
             val intent = Intent(this, FilterResultActivity::class.java).apply{
+                putExtra("MINCARBS", minCarbs)
+                putExtra("MAXCARBS", maxCarbs)
                 putExtra("MINCALORIES", minCalories.toInt())//removed .toString()
                 putExtra("MAXCALORIES", maxCalories.toInt())//removed .toString()
+
             }
 
             startActivity(intent)
@@ -32,6 +38,21 @@ class FilterFruitActivity : AppCompatActivity() {
     }
 
     private fun initializeView() {
+        val sldrCarbs: RangeSlider = findViewById(R.id.sldrCarbs)
+
+        sldrCarbs.addOnSliderTouchListener(object : RangeSlider.OnSliderTouchListener {
+            @SuppressLint("RestrictedApi")
+            override fun onStartTrackingTouch(slider: RangeSlider) {
+            }
+            @SuppressLint("RestrictedApi")
+            override fun onStopTrackingTouch(slider: RangeSlider) {
+            }
+        })
+        sldrCarbs.addOnChangeListener { slider, value, fromUser ->
+            carbValues = sldrCarbs.values
+        }
+
+
         val sldrCalories: RangeSlider = findViewById(R.id.sldrCalories)
 
         sldrCalories.addOnSliderTouchListener(object : RangeSlider.OnSliderTouchListener {

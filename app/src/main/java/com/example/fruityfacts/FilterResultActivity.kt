@@ -41,7 +41,9 @@ class FilterResultActivity : AppCompatActivity() {
                     //filter data
                     for (item: Fruit in response.body()!!) {
                         if(item.nutritions.calories < intent?.extras?.getInt("MAXCALORIES")!!&&
-                            item.nutritions.calories > intent?.extras?.getInt("MINCALORIES")!!){
+                            item.nutritions.calories > intent?.extras?.getInt("MINCALORIES")!!&&
+                            item.nutritions.carbohydrates.toFloat() < intent?.extras?.getFloat("MAXCARBS")!!&&
+                            item.nutritions.carbohydrates.toFloat() > intent?.extras?.getFloat("MINCARBS")!!){
                             filteredList.add(item)
                         }
                     }
