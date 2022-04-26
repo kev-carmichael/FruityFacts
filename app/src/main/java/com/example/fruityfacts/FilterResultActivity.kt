@@ -48,7 +48,7 @@ class FilterResultActivity : AppCompatActivity() {
 
                     //process data
                     val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-                    recyclerView.layoutManager = GridLayoutManager(this@FilterResultActivity,2)
+                    recyclerView.layoutManager = GridLayoutManager(this@FilterResultActivity,1)
                     recyclerView.adapter = FilterResultAdapter(filteredList) //was FilterResultAdapter(response.body()!!)
 
                 }else{
