@@ -19,7 +19,7 @@
         android:layout_marginEnd="8dp"/>
 
     <TextView
-        android:id="@+id/txtIdRecycler"
+        android:id="@+id/txtCarbsRecycler"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/guidelineRecycler"
@@ -38,7 +38,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineRecycler"
-        app:layout_constraintTop_toBottomOf="@+id/txtIdRecycler" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCarbsRecycler" />
 
     <ImageView
         android:id="@+id/imgFruitRecycler"
@@ -53,11 +53,11 @@
         app:layout_constraintDimensionRatio="1:1" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRecycler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guidelineRecycler"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.22"/>
+        app:layout_constraintGuide_percent="0.5" />
 
     <Button
         android:id="@+id/btnMoreInfoRecycler"

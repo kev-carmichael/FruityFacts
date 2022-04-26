@@ -16,7 +16,7 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val imgFruitRecycler: ImageView = view.findViewById(R.id.imgFruitRecycler)
         val txtNameRecycler: TextView = view.findViewById(R.id.txtNameRecycler)
-        val txtIdRecycler: TextView = view.findViewById(R.id.txtIdRecycler)
+        val txtCarbsRecycler: TextView = view.findViewById(R.id.txtCarbsRecycler)
         val txtCaloriesRecycler: TextView = view.findViewById(R.id.txtCaloriesRecycler)
     }
 
@@ -33,7 +33,7 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
         val theFruit = fruitList.get(position)
         FruitImages().fruitMap.get(theFruit.id)?.let { holder.imgFruitRecycler.setImageResource(it) }
         holder.txtNameRecycler.text = "Name: " + theFruit.name
-        holder.txtIdRecycler.text = "Id: " + theFruit.id
+        holder.txtCarbsRecycler.text = "Carbohydrates: " + theFruit.nutritions.carbohydrates.toString()
         holder.txtCaloriesRecycler.text = "Calories: " + theFruit.nutritions.calories.toString()
         //Picasso.get().load(theCountry
         //.countryInfo.flag).into(holder.imgFlag)
