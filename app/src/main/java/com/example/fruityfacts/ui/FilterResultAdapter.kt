@@ -20,6 +20,7 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
         val txtProteinRecycler: TextView = view.findViewById(R.id.txtProteinRecycler)
         val txtFatRecycler: TextView = view.findViewById(R.id.txtFatRecycler)
         val txtCaloriesRecycler: TextView = view.findViewById(R.id.txtCaloriesRecycler)
+        val txtSugarRecycler: TextView = view.findViewById(R.id.txtSugarRecycler)
     }
 
     override fun getItemCount() = fruitList.size
@@ -39,6 +40,7 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
         holder.txtProteinRecycler.text = "Protein: " + theFruit.nutritions.protein.toString()
         holder.txtFatRecycler.text = "Fat: " + theFruit.nutritions.fat.toString()
         holder.txtCaloriesRecycler.text = "Calories: " + theFruit.nutritions.calories.toString()
+        holder.txtSugarRecycler.text = "Sugar: " + theFruit.nutritions.sugar.toString()
         //Picasso.get().load(theCountry
         //.countryInfo.flag).into(holder.imgFlag)
     }
