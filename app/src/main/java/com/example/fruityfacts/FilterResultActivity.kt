@@ -40,16 +40,16 @@ class FilterResultActivity : AppCompatActivity() {
                 if (response.isSuccessful){
                     //filter data
                     for (item: Fruit in response.body()!!) {
-                        if( item.nutritions.carbohydrates.toFloat() < intent?.extras?.getFloat("MAXCARBS")!!&&
-                            item.nutritions.carbohydrates.toFloat() > intent?.extras?.getFloat("MINCARBS")!!&&
-                            item.nutritions.protein.toFloat() < intent?.extras?.getFloat("MAXPROTEIN")!!&&
-                            item.nutritions.protein.toFloat() > intent?.extras?.getFloat("MINPROTEIN")!!&&
-                            item.nutritions.fat.toFloat() < intent?.extras?.getFloat("MAXFAT")!!&&
-                            item.nutritions.fat.toFloat() > intent?.extras?.getFloat("MINFAT")!!&&
-                            item.nutritions.calories < intent?.extras?.getInt("MAXCALORIES")!!&&
-                            item.nutritions.calories > intent?.extras?.getInt("MINCALORIES")!!&&
-                            item.nutritions.sugar.toFloat() < intent?.extras?.getFloat("MAXSUGAR")!!&&
-                            item.nutritions.sugar.toFloat() > intent?.extras?.getFloat("MINSUGAR")!!){
+                        if( (item.nutritions.carbohydrates.toFloat() < intent?.extras?.getFloat("MAXCARBS")!!)&&
+                            (item.nutritions.carbohydrates.toFloat() > intent?.extras?.getFloat("MINCARBS")!!)&&
+                            (item.nutritions.protein.toFloat() < intent?.extras?.getFloat("MAXPROTEIN")!!)&&
+                            (item.nutritions.protein.toFloat() > intent?.extras?.getFloat("MINPROTEIN")!!)&&
+                            (item.nutritions.fat.toFloat() < intent?.extras?.getFloat("MAXFAT")!!)&&
+                            (item.nutritions.fat.toFloat() > intent?.extras?.getFloat("MINFAT")!!)&&
+                            (item.nutritions.calories < intent?.extras?.getInt("MAXCALORIES")!!)&&
+                            (item.nutritions.calories > intent?.extras?.getInt("MINCALORIES")!!)&&
+                            (item.nutritions.sugar.toFloat() < intent?.extras?.getFloat("MAXSUGAR")!!)&&
+                            (item.nutritions.sugar.toFloat() > intent?.extras?.getFloat("MINSUGAR")!!)){
                             filteredList.add(item)
                         }
                     }
