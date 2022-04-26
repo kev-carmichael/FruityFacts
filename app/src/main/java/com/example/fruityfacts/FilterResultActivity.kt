@@ -38,11 +38,10 @@ class FilterResultActivity : AppCompatActivity() {
 
 
                 if (response.isSuccessful){
-                    // IT WORKS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     //filter data
-
                     for (item: Fruit in response.body()!!) {
-                        if(item.nutritions.calories < intent?.extras?.getInt("MAXCALORIES")!!){
+                        if(item.nutritions.calories < intent?.extras?.getInt("MAXCALORIES")!!&&
+                            item.nutritions.calories > intent?.extras?.getInt("MINCALORIES")!!){
                             filteredList.add(item)
                         }
                     }

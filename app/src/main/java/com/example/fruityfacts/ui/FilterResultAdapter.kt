@@ -12,9 +12,6 @@ import com.example.fruityfacts.data.Fruit
 class FilterResultAdapter (private val fruitList: List<Fruit>) :
     RecyclerView.Adapter<FilterResultAdapter.ViewHolder>() {
 
-    //******android is not expecting intent?. here - it belongs in an activity, so
-    //******need to filter there? - TRIED, DIDNT WORK
-
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val txtNameRecycler: TextView = view.findViewById(R.id.txtNameRecycler)
         val txtCaloriesRecycler: TextView = view.findViewById(R.id.txtCaloriesRecycler)
