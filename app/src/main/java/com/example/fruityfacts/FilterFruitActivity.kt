@@ -30,8 +30,8 @@ class FilterFruitActivity : AppCompatActivity() {
             val maxFat: Float = fatValues[1]
             val minCalories: Float = calorieValues[0]
             val maxCalories: Float = calorieValues[1]
-            val minSugar: Float = fatValues[0]
-            val maxSugar: Float = fatValues[1]
+            val minSugar: Float = sugarValues[0]
+            val maxSugar: Float = sugarValues[1]
 
             val intent = Intent(this, FilterResultActivity::class.java).apply{
                 putExtra("MINCARBS", minCarbs)
