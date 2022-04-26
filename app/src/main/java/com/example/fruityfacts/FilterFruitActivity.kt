@@ -8,11 +8,11 @@ import android.widget.Button
 import com.google.android.material.slider.RangeSlider
 
 class FilterFruitActivity : AppCompatActivity() {
-    var carbValues: List<Float> = listOf(0.0f, 100.0f)
-    var proteinValues: List<Float> = listOf(0.0f, 100.0f)
-    var fatValues: List<Float> = listOf(0.0f, 100.0f)
-    var calorieValues: List<Float> = listOf(0.0f, 100.0f)
-    var sugarValues: List<Float> = listOf(0.0f, 100.0f)
+    var carbValues: List<Float> = listOf(0.0f, 200.0f)
+    var proteinValues: List<Float> = listOf(0.0f, 200.0f)
+    var fatValues: List<Float> = listOf(0.0f, 200.0f)
+    var calorieValues: List<Float> = listOf(0.0f, 200.0f)
+    var sugarValues: List<Float> = listOf(0.0f, 200.0f)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

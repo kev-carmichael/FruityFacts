@@ -24,10 +24,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:stepSize="10.0"
+        android:stepSize="3.0"
         android:valueFrom="0.0"
-        android:valueTo="100.0"
-        app:values="@array/initial_slider_values"
+        android:valueTo="30.0"
+        app:values="@array/carbs_initial_slider_values"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/lblSelectValues"/>
@@ -39,10 +39,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:stepSize="10.0"
+        android:stepSize="1.0"
         android:valueFrom="0.0"
-        android:valueTo="100.0"
-        app:values="@array/initial_slider_values"
+        android:valueTo="10.0"
+        app:values="@array/protein_initial_slider_values"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/sldrCarbs"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -54,10 +54,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:stepSize="10.0"
+        android:stepSize="1.0"
         android:valueFrom="0.0"
-        android:valueTo="100.0"
-        app:values="@array/initial_slider_values"
+        android:valueTo="10.0"
+        app:values="@array/fat_initial_slider_values"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/sldrProtein"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -71,8 +71,8 @@
         android:layout_marginEnd="8dp"
         android:stepSize="10.0"
         android:valueFrom="0.0"
-        android:valueTo="100.0"
-        app:values="@array/initial_slider_values"
+        android:valueTo="150.0"
+        app:values="@array/calories_initial_slider_values"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/sldrFat"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -84,13 +84,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:stepSize="10.0"
+        android:stepSize="2.0"
         android:valueFrom="0.0"
-        android:valueTo="100.0"
+        android:valueTo="20.0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/sldrCalories"
-        app:values="@array/initial_slider_values" />
+        app:values="@array/sugar_initial_slider_values" />
 
 
     <TextView
