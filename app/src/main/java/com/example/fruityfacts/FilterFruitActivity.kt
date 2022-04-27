@@ -60,7 +60,7 @@ class FilterFruitActivity : AppCompatActivity() {
         })
         sldrCarbs.addOnChangeListener { slider, value, fromUser ->
             carbValues = sldrCarbs.values
-            txtCarbValues.text = "Start value: ${carbValues[0]}, End value: ${carbValues[1]}";
+            txtCarbValues.text = "Range: ${carbValues[0]} - ${carbValues[1]}";
         }
 
         val sldrProtein: RangeSlider = findViewById(R.id.sldrProtein)

@@ -27,10 +27,10 @@
         android:stepSize="3.0"
         android:valueFrom="0.0"
         android:valueTo="30.0"
-        app:values="@array/carbs_initial_slider_values"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
-        app:layout_constraintTop_toBottomOf="@id/lblSelectValues"/>
+        app:layout_constraintTop_toBottomOf="@id/lblSelectValues"
+        app:values="@array/carbs_initial_slider_values" />
 
     <com.google.android.material.slider.RangeSlider
         android:id="@+id/sldrProtein"
@@ -166,9 +166,12 @@
         android:id="@+id/txtCarbValues"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="70dp" />
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/range"
+        app:layout_constraintEnd_toEndOf="@+id/sldrCarbs"
+        app:layout_constraintStart_toStartOf="@+id/sldrCarbs"
+        app:layout_constraintTop_toTopOf="@+id/sldrCarbs" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
