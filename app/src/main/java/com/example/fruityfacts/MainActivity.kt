@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.TextClock
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
@@ -64,19 +65,16 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
-        //code to be executed when accuracy changes
-        //not needed if accuracy is not a factor
-        Toast.makeText(this, "Accuracy change", Toast.LENGTH_LONG).show()
+        //not needed, as accuracy is not a factor
     }
 
     override fun onSensorChanged(event: SensorEvent) {
-        //light sensor returns a single value
-        val txtSensorsMain: TextView = findViewById(R.id.txtSensorsMain)
         val lux = event.values[0]
         //*****ADD CODE TO GO TO DARK MODE****************************************
-        if (lux != oldLux) {
-            txtSensorsMain.append("$lux \n")
-            oldLux = lux
+        if (lux < 20000) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
 

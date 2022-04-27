@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblFruityFacts"
-        tools:srcCompat="@drawable/zzFruitBowl" />
+        tools:srcCompat="@drawable/zzfruitbowl" />
 
     <TextView
         android:id="@+id/lblSelectFruitBy"
@@ -70,15 +70,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnName" />
-
-    <TextView
-        android:id="@+id/txtSensorsMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="99dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNutritionalValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
