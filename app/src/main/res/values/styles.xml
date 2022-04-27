@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainTitle"
+        parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textColor">#ff60ad5e</item>
+    </style>
+</resources>
