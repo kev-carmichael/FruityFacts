@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="initial_slider_values">
-        <item>20.0</item>
-        <item>70.0</item>
+        <item>0.0</item>
+        <item>100.0</item>
     </array>
     <array name="carbs_initial_slider_values">
-        <item>6.0</item>
-        <item>24.0</item>
+        <item>0.0</item>
+        <item>30.0</item>
     </array>
     <array name="protein_initial_slider_values">
-        <item>2.0</item>
-        <item>8.0</item>
+        <item>0.0</item>
+        <item>10.0</item>
     </array>
     <array name="fat_initial_slider_values">
-        <item>2.0</item>
-        <item>8.0</item>
+        <item>0.0</item>
+        <item>10.0</item>
     </array>
     <array name="calories_initial_slider_values">
-        <item>30.0</item>
-        <item>120.0</item>
+        <item>0.0</item>
+        <item>150.0</item>
     </array>
     <array name="sugar_initial_slider_values">
-        <item>4.0</item>
-        <item>16.0</item>
+        <item>0.0</item>
+        <item>20.0</item>
     </array>
 
     <string-array name="fruitcollection">
