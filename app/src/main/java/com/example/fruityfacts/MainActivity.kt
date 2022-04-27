@@ -24,15 +24,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //create instance of SensorManager class
         sensorManager = getSystemService(Context.SENSOR_SERVICE)
                 as SensorManager
 
-        //get the default light sensor
         if (sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT) != null) {
             light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
         } else {
-            //no light sensor
+            // not required
         }
 
         val btnName: Button = findViewById(R.id.btnName)
@@ -52,7 +50,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     override fun onResume() {
         super.onResume()
         light?.let { light ->
-            //add listener with default sampling interval
             sensorManager.registerListener(this, light,
                 SensorManager.SENSOR_DELAY_NORMAL)
         }
@@ -60,7 +57,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     override fun onPause() {
         super.onPause()
-        //remove listener
         sensorManager.unregisterListener(this)
     }
 
@@ -77,6 +73,5 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
-
 
 }
