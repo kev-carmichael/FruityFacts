@@ -43,5 +43,6 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
         holder.txtSugarRecycler.text = "Sugar: " + theFruit.nutritions.sugar.toString()
         //Picasso.get().load(theCountry
         //.countryInfo.flag).into(holder.imgFlag)
+        
     }
 }
