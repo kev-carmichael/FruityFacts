@@ -162,5 +162,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sldrSugar" />
 
+    <TextView
+        android:id="@+id/txtCarbValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="70dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

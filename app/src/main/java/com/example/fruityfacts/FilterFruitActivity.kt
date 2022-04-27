@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import com.google.android.material.slider.RangeSlider
 
 class FilterFruitActivity : AppCompatActivity() {
@@ -18,8 +19,7 @@ class FilterFruitActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter_fruit)
 
-        initializeView()
-
+        val txtCarbValues: TextView = findViewById(R.id.txtCarbValues);
         val btnFindFruit: Button = findViewById(R.id.btnFindFruit)
         btnFindFruit.setOnClickListener {
             val minCarbs: Float = carbValues[0]
@@ -45,13 +45,9 @@ class FilterFruitActivity : AppCompatActivity() {
                 putExtra("MINSUGAR", minSugar)
                 putExtra("MAXSUGAR", maxSugar)
             }
-
             startActivity(intent)
-
         }
-    }
 
-    private fun initializeView() {
         val sldrCarbs: RangeSlider = findViewById(R.id.sldrCarbs)
 
         sldrCarbs.addOnSliderTouchListener(object : RangeSlider.OnSliderTouchListener {
@@ -64,6 +60,7 @@ class FilterFruitActivity : AppCompatActivity() {
         })
         sldrCarbs.addOnChangeListener { slider, value, fromUser ->
             carbValues = sldrCarbs.values
+            txtCarbValues.text = "Start value: ${carbValues[0]}, End value: ${carbValues[1]}";
         }
 
         val sldrProtein: RangeSlider = findViewById(R.id.sldrProtein)
@@ -122,6 +119,11 @@ class FilterFruitActivity : AppCompatActivity() {
             sugarValues = sldrSugar.values
         }
 
+
+
+
+
     }
+
 
 }
