@@ -14,7 +14,6 @@ import com.example.fruityfacts.ui.AllFruitAdapter
 class AllFruitActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
     private var light: Sensor? = null
-
     private var oldLux: Float = 0F
 
     override fun onCreate(savedInstanceState: Bundle?) {
