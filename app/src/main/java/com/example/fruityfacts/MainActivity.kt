@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         //light sensor returns a single value
         val txtSensorsMain: TextView = findViewById(R.id.txtSensorsMain)
         val lux = event.values[0]
+        //*****ADD CODE TO GO TO DARK MODE****************************************
         if (lux != oldLux) {
             txtSensorsMain.append("$lux \n")
             oldLux = lux
