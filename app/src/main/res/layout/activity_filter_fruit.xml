@@ -173,5 +173,53 @@
         app:layout_constraintStart_toStartOf="@+id/sldrCarbs"
         app:layout_constraintTop_toTopOf="@+id/sldrCarbs" />
 
+    <TextView
+        android:id="@+id/txtProteinValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/range"
+        app:layout_constraintEnd_toEndOf="@id/sldrProtein"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@id/sldrProtein"
+        app:layout_constraintTop_toTopOf="@id/sldrProtein" />
+
+    <TextView
+        android:id="@+id/txtFatValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/range"
+        app:layout_constraintEnd_toEndOf="@id/sldrFat"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@id/sldrFat"
+        app:layout_constraintTop_toTopOf="@id/sldrFat" />
+
+    <TextView
+        android:id="@+id/txtCalorieValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/range"
+        app:layout_constraintEnd_toEndOf="@id/sldrCalories"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@id/sldrCalories"
+        app:layout_constraintTop_toTopOf="@id/sldrCalories" />
+
+    <TextView
+        android:id="@+id/txtSugarValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/range"
+        app:layout_constraintEnd_toEndOf="@id/sldrSugar"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@id/sldrSugar"
+        app:layout_constraintTop_toTopOf="@id/sldrSugar" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

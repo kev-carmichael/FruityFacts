@@ -20,6 +20,11 @@ class FilterFruitActivity : AppCompatActivity() {
         setContentView(R.layout.activity_filter_fruit)
 
         val txtCarbValues: TextView = findViewById(R.id.txtCarbValues);
+        val txtProteinValues: TextView = findViewById(R.id.txtProteinValues);
+        val txtFatValues: TextView = findViewById(R.id.txtFatValues);
+        val txtCalorieValues: TextView = findViewById(R.id.txtCalorieValues);
+        val txtSugarValues: TextView = findViewById(R.id.txtSugarValues);
+
         val btnFindFruit: Button = findViewById(R.id.btnFindFruit)
         btnFindFruit.setOnClickListener {
             val minCarbs: Float = carbValues[0]
@@ -60,7 +65,7 @@ class FilterFruitActivity : AppCompatActivity() {
         })
         sldrCarbs.addOnChangeListener { slider, value, fromUser ->
             carbValues = sldrCarbs.values
-            txtCarbValues.text = "Range: ${carbValues[0]} - ${carbValues[1]}";
+            txtCarbValues.text = "Range: ${carbValues[0]}g - ${carbValues[1]}g"
         }
 
         val sldrProtein: RangeSlider = findViewById(R.id.sldrProtein)
@@ -75,6 +80,7 @@ class FilterFruitActivity : AppCompatActivity() {
         })
         sldrProtein.addOnChangeListener { slider, value, fromUser ->
             proteinValues = sldrProtein.values
+            txtProteinValues.text = "Range: ${proteinValues[0]}g - ${proteinValues[1]}g"
         }
 
         val sldrFat: RangeSlider = findViewById(R.id.sldrFat)
@@ -89,6 +95,7 @@ class FilterFruitActivity : AppCompatActivity() {
         })
         sldrFat.addOnChangeListener { slider, value, fromUser ->
             fatValues = sldrFat.values
+            txtFatValues.text = "Range: ${fatValues[0]}g - ${fatValues[1]}g"
         }
 
         val sldrCalories: RangeSlider = findViewById(R.id.sldrCalories)
@@ -103,6 +110,7 @@ class FilterFruitActivity : AppCompatActivity() {
         })
         sldrCalories.addOnChangeListener { slider, value, fromUser ->
             calorieValues = sldrCalories.values
+            txtCalorieValues.text = "Range: ${calorieValues[0]}kCal - ${calorieValues[1]}kCal"
         }
 
         val sldrSugar: RangeSlider = findViewById(R.id.sldrSugar)
@@ -117,6 +125,7 @@ class FilterFruitActivity : AppCompatActivity() {
         })
         sldrSugar.addOnChangeListener { slider, value, fromUser ->
             sugarValues = sldrSugar.values
+            txtSugarValues.text = "Range: ${sugarValues[0]}g - ${sugarValues[1]}g"
         }
 
 
