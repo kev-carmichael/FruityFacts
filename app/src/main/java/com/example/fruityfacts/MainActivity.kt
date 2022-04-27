@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //for dark mode
         sensorManager = getSystemService(Context.SENSOR_SERVICE)
                 as SensorManager
-
         if (sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT) != null) {
             light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
         } else {
@@ -66,7 +66,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     override fun onSensorChanged(event: SensorEvent) {
         val lux = event.values[0]
-        //*****ADD CODE TO GO TO DARK MODE****************************************
         if (lux < 20000) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else{

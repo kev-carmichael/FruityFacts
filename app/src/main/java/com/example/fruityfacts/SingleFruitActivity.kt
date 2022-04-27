@@ -1,6 +1,11 @@
 package com.example.fruityfacts
 
+import android.content.Context
 import android.content.Intent
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +13,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.fruityfacts.api.FruitService
 import com.example.fruityfacts.api.ServiceBuilder
 import com.example.fruityfacts.data.Fruit
@@ -16,10 +22,25 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SingleFruitActivity : AppCompatActivity() {
+class SingleFruitActivity : AppCompatActivity(), SensorEventListener {
+    private lateinit var sensorManager: SensorManager
+    private var light: Sensor? = null
+
+    private var oldLux: Float = 0F
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_fruit)
+        //for dark mode
+        sensorManager = getSystemService(Context.SENSOR_SERVICE)
+                as SensorManager
+
+        if (sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT) != null) {
+            light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
+        } else {
+            // not required
+        }
+
         val fruitId = intent?.extras?.getString(SINGLEFRUIT)
             .toString().replace("\\s".toRegex(),"")
 
@@ -35,6 +56,32 @@ class SingleFruitActivity : AppCompatActivity() {
         }
 
         loadData(fruitId)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        light?.let { light ->
+            sensorManager.registerListener(this, light,
+                SensorManager.SENSOR_DELAY_NORMAL)
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sensorManager.unregisterListener(this)
+    }
+
+    override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
+        //not needed, as accuracy is not a factor
+    }
+
+    override fun onSensorChanged(event: SensorEvent) {
+        val lux = event.values[0]
+        if (lux < 20000) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
     }
 
     companion object {

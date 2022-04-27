@@ -23,6 +23,7 @@ class AllFruitActivity : AppCompatActivity(), SensorEventListener {
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view_all_fruit)
         recyclerView.adapter = AllFruitAdapter(this)
 
+        //for dark mode
         sensorManager = getSystemService(Context.SENSOR_SERVICE)
                 as SensorManager
 
@@ -52,7 +53,6 @@ class AllFruitActivity : AppCompatActivity(), SensorEventListener {
 
     override fun onSensorChanged(event: SensorEvent) {
         val lux = event.values[0]
-        //*****ADD CODE TO GO TO DARK MODE****************************************
         if (lux < 20000) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else{
