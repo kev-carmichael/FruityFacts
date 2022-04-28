@@ -103,13 +103,13 @@ class SingleFruitActivity : AppCompatActivity(), SensorEventListener {
             if (response.isSuccessful){
 
                     val txtName : TextView = findViewById(R.id.txtName)
-                    val txtId : TextView = findViewById(R.id.txtId)
+                    val txtId : TextView = findViewById(R.id.txtCarbs)
                     val txtCalories: TextView = findViewById(R.id.txtCalories)
                     val imgFruit: ImageView = findViewById(R.id.imgFruit)
                     //process data
                     val fruit  = response.body()!!
                     txtName.text = fruit.name
-                    txtId.text = fruit.id.toString()
+                    txtId.text = fruit.nutritions.carbohydrates.toString()
                     txtCalories.text = fruit.nutritions.calories.toString()
                     FruitImages().fruitMap.get(fruit.id)?.let { imgFruit.setImageResource(it) }
 
