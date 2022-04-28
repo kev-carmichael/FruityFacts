@@ -101,17 +101,23 @@ class SingleFruitActivity : AppCompatActivity(), SensorEventListener {
             ) {
 
             if (response.isSuccessful){
+                val txtName : TextView = findViewById(R.id.txtName)
+                val txtCarbs : TextView = findViewById(R.id.txtCarbs)
+                val txtProtein : TextView = findViewById(R.id.txtProtein)
+                val txtFat : TextView = findViewById(R.id.txtFat)
+                val txtCalories: TextView = findViewById(R.id.txtCalories)
+                val txtSugar : TextView = findViewById(R.id.txtSugar)
+                val imgFruit: ImageView = findViewById(R.id.imgFruit)
 
-                    val txtName : TextView = findViewById(R.id.txtName)
-                    val txtId : TextView = findViewById(R.id.txtCarbs)
-                    val txtCalories: TextView = findViewById(R.id.txtCalories)
-                    val imgFruit: ImageView = findViewById(R.id.imgFruit)
-                    //process data
-                    val fruit  = response.body()!!
-                    txtName.text = fruit.name
-                    txtId.text = fruit.nutritions.carbohydrates.toString()
-                    txtCalories.text = fruit.nutritions.calories.toString()
-                    FruitImages().fruitMap.get(fruit.id)?.let { imgFruit.setImageResource(it) }
+                //process data
+                val fruit  = response.body()!!
+                txtName.text = "Name: " + fruit.name
+                txtCarbs.text = "Carbohydrates: " + fruit.nutritions.carbohydrates.toString() +" g"
+                txtProtein.text = "Protein: " + fruit.nutritions.protein.toString() +" g"
+                txtFat.text = "Fat: " + fruit.nutritions.fat.toString() +" g"
+                txtCalories.text = "Calories: " +fruit.nutritions.calories.toString() +" kCal"
+                txtSugar.text = "Sugar: " +fruit.nutritions.sugar.toString() +" g"
+                FruitImages().fruitMap.get(fruit.id)?.let { imgFruit.setImageResource(it) }
 
                 }else{
                     //output alert
