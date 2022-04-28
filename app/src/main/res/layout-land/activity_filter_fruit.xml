@@ -8,12 +8,12 @@
 
     <TextView
         android:id="@+id/lblSelectValues"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/normal_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:gravity="center_horizontal"
         android:text="@string/lblSelectValues"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,13 +22,12 @@
         android:id="@+id/sldrCarbs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:stepSize="3.0"
         android:valueFrom="0.0"
         android:valueTo="30.0"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalguideline2"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/lblSelectValues"
         app:values="@array/carbs_initial_slider_values" />
@@ -37,58 +36,54 @@
         android:id="@+id/sldrProtein"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:stepSize="1.0"
         android:valueFrom="0.0"
         android:valueTo="10.0"
-        app:values="@array/protein_initial_slider_values"
+        app:layout_constraintEnd_toStartOf="@+id/verticalguideline2"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/sldrCarbs"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:values="@array/protein_initial_slider_values" />
 
     <com.google.android.material.slider.RangeSlider
         android:id="@+id/sldrFat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:stepSize="1.0"
         android:valueFrom="0.0"
         android:valueTo="10.0"
-        app:values="@array/fat_initial_slider_values"
+        app:layout_constraintEnd_toStartOf="@+id/verticalguideline2"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/sldrProtein"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:values="@array/fat_initial_slider_values" />
 
     <com.google.android.material.slider.RangeSlider
         android:id="@+id/sldrCalories"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:stepSize="10.0"
         android:valueFrom="0.0"
         android:valueTo="150.0"
-        app:values="@array/calories_initial_slider_values"
+        app:layout_constraintEnd_toStartOf="@+id/verticalguideline2"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/sldrFat"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:values="@array/calories_initial_slider_values" />
 
     <com.google.android.material.slider.RangeSlider
         android:id="@+id/sldrSugar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:stepSize="2.0"
         android:valueFrom="0.0"
         android:valueTo="20.0"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalguideline2"
         app:layout_constraintStart_toEndOf="@id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@id/sldrCalories"
         app:values="@array/sugar_initial_slider_values" />
@@ -98,8 +93,8 @@
         android:id="@+id/lblCarbs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:text="@string/lblCarbs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/sldrCarbs" />
@@ -108,8 +103,8 @@
         android:id="@+id/lblProtein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:text="@string/lblProtein"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/sldrProtein" />
@@ -118,8 +113,8 @@
         android:id="@+id/lblFat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:text="@string/lblFat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/sldrFat" />
@@ -128,8 +123,8 @@
         android:id="@+id/lblCalories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:text="@string/lblCalories"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/sldrCalories" />
@@ -138,8 +133,8 @@
         android:id="@+id/lblSugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginTop="@dimen/landscape_spacing"
         android:text="@string/lblSugar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/sldrSugar" />
@@ -149,19 +144,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
 
     <Button
         android:id="@+id/btnFindFruit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/landscape_spacing"
+        android:layout_marginEnd="@dimen/landscape_spacing"
         android:text="@string/btnFindFruit"
+        app:layout_constraintBottom_toBottomOf="@+id/sldrFat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sldrSugar" />
+        app:layout_constraintStart_toStartOf="@+id/verticalguideline2" />
 
     <TextView
         android:id="@+id/txtCarbValues"
