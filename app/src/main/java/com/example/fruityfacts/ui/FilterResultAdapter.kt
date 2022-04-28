@@ -36,13 +36,10 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
         val theFruit = fruitList.get(position)
         FruitImages().fruitMap.get(theFruit.id)?.let { holder.imgFruitRecycler.setImageResource(it) }
         holder.txtNameRecycler.text = "Name: " + theFruit.name
-        holder.txtCarbsRecycler.text = "Carbohydrates: " + theFruit.nutritions.carbohydrates.toString()
-        holder.txtProteinRecycler.text = "Protein: " + theFruit.nutritions.protein.toString()
-        holder.txtFatRecycler.text = "Fat: " + theFruit.nutritions.fat.toString()
-        holder.txtCaloriesRecycler.text = "Calories: " + theFruit.nutritions.calories.toString()
-        holder.txtSugarRecycler.text = "Sugar: " + theFruit.nutritions.sugar.toString()
-        //Picasso.get().load(theCountry
-        //.countryInfo.flag).into(holder.imgFlag)
-        
+        holder.txtCarbsRecycler.text = "Carbohydrates: " + theFruit.nutritions.carbohydrates.toString()+" g"
+        holder.txtProteinRecycler.text = "Protein: " + theFruit.nutritions.protein.toString()+" g"
+        holder.txtFatRecycler.text = "Fat: " + theFruit.nutritions.fat.toString()+" g"
+        holder.txtCaloriesRecycler.text = "Calories: " + theFruit.nutritions.calories.toString()+" kCal"
+        holder.txtSugarRecycler.text = "Sugar: " + theFruit.nutritions.sugar.toString()+" g"
     }
 }
