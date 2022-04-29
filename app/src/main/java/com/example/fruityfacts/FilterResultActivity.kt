@@ -7,6 +7,7 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.GridLayoutManager
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fruityfacts.api.FruitService
 import com.example.fruityfacts.api.ServiceBuilder
 import com.example.fruityfacts.data.Fruit
+import com.example.fruityfacts.data.FruitFavourites
 import com.example.fruityfacts.ui.FilterResultAdapter
 import retrofit2.Call
 import retrofit2.Callback
@@ -36,6 +38,13 @@ class FilterResultActivity : AppCompatActivity(), SensorEventListener {
         } else {
             // not required
         }
+
+        //save favourite
+        /*val btnAddFavourite: Button = findViewById(R.id.btnAddFavourite)
+        btnAddFavourite.setOnClickListener {
+            FruitFavourites.addToList(fruitId)
+        }*/
+
         loadData()
     }
 
@@ -76,7 +85,6 @@ class FilterResultActivity : AppCompatActivity(), SensorEventListener {
             override fun onResponse(call: Call<List<Fruit>>,
                                     response: Response<List<Fruit>>
             ) {
-
 
                 if (response.isSuccessful){
                     //filter data

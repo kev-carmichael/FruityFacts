@@ -1,13 +1,16 @@
 package com.example.fruityfacts.ui
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fruityfacts.R
 import com.example.fruityfacts.data.Fruit
+import com.example.fruityfacts.data.FruitFavourites
 import com.example.fruityfacts.data.FruitImages
 
 class FilterResultAdapter (private val fruitList: List<Fruit>) :
@@ -21,6 +24,7 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
         val txtFatRecycler: TextView = view.findViewById(R.id.txtFatRecycler)
         val txtCaloriesRecycler: TextView = view.findViewById(R.id.txtCaloriesRecycler)
         val txtSugarRecycler: TextView = view.findViewById(R.id.txtSugarRecycler)
+        val btnAddFavouriteRecycler: Button = view.findViewById(R.id.btnAddFavouriteRecycler)
     }
 
     override fun getItemCount() = fruitList.size
@@ -41,5 +45,18 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
         holder.txtFatRecycler.text = "Fat: " + theFruit.nutritions.fat.toString()+" g"
         holder.txtCaloriesRecycler.text = "Calories: " + theFruit.nutritions.calories.toString()+" kCal"
         holder.txtSugarRecycler.text = "Sugar: " + theFruit.nutritions.sugar.toString()+" g"
+        holder.btnAddFavouriteRecycler.setOnClickListener {
+            FruitFavourites.addToList(theFruit.name)
+        }
+
+
+
+        // **************Try for implciit intent to connect internet
+        /*holder.itemView.setOnClickListener { v ->
+            val intent = Intent(v.context, QuestionsActi::class.java)
+            v.context.startActivity(intent)
+        }*/
+
+
     }
 }
