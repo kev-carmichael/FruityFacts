@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#FFFFFF"
+    tools:context=".FavouritesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgFruitFavourites"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/txtNameFavourites"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtCarbsFavourites"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtProteinFavourites"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtFatFavourites"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtCaloriesFavourites"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtSugarFavourites"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnMoreInfoFavourites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnMoreInfo" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

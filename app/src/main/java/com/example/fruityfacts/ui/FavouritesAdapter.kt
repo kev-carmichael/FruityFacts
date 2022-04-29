@@ -29,7 +29,7 @@ class FavouritesAdapter (private val fruitList: List<Fruit>) :
                                     viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.fruit_recycler_layout, parent, false))
+                .inflate(R.layout.fruit_favourites_layout, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
