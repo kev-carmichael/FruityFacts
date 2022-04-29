@@ -59,8 +59,7 @@ class SingleFruitActivity : AppCompatActivity(), SensorEventListener {
         //save favourite
         val btnAddFavourite: Button = findViewById(R.id.btnAddFavourite)
         btnAddFavourite.setOnClickListener {
-            FruitFavourites().fruitFavouritesList.add(fruitId)
-
+            FruitFavourites.addToList(fruitId)
         }
 
         loadData(fruitId)

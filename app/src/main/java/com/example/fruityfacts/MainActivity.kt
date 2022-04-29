@@ -13,6 +13,7 @@ import android.widget.TextClock
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.fruityfacts.data.FruitFavourites
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
@@ -45,11 +46,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             startActivity(filterFruitIntent)
         }
 
-        /*val btnGoToFavourites: Button = findViewById(R.id.btnGoToFavourites)
+        val btnGoToFavourites: Button = findViewById(R.id.btnGoToFavourites)
         btnGoToFavourites.setOnClickListener {
+            Toast.makeText(this,FruitFavourites.getListItem1(),Toast.LENGTH_SHORT).show()
+
             val favouritesIntent = Intent(this, FavouritesActivity::class.java)
             startActivity(favouritesIntent)
-        }*/
+        }
         
     }
 

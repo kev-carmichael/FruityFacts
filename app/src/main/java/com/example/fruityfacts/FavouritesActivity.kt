@@ -19,6 +19,7 @@ class FavouritesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favourites)
+        loadData()
     }
 
     val filteredList: MutableList<Fruit> =  ArrayList<Fruit>()
@@ -33,19 +34,22 @@ class FavouritesActivity : AppCompatActivity() {
                                     response: Response<List<Fruit>>
             ) {
 
-
                 if (response.isSuccessful){
                     //filter data
                     for (item: Fruit in response.body()!!) {
-                        for (favourite: String in FruitFavourites().fruitFavouritesList){
+                        /*for (favourite: String in FruitFavourites.getList()){
                             if(item.name == favourite){
                                 filteredList.add(item)
                             }
+                        }*/
+                        if(item.name.equals(FruitFavourites.getListItem1())){
+                            filteredList.add(item)
                         }
+
                     }
 
                     //process data
-                    val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+                    val recyclerView: RecyclerView = findViewById(R.id.recyclerViewFavourites)
                     recyclerView.layoutManager = GridLayoutManager(this@FavouritesActivity,1)
                     recyclerView.adapter = FavouritesAdapter(filteredList)
 
