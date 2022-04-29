@@ -37,15 +37,11 @@ class FavouritesActivity : AppCompatActivity() {
                 if (response.isSuccessful){
                     //filter data
                     for (item: Fruit in response.body()!!) {
-                        /*for (favourite: String in FruitFavourites.getList()){
+                        for (favourite: String in FruitFavourites.getList()){
                             if(item.name == favourite){
                                 filteredList.add(item)
                             }
-                        }*/
-                        if(item.name.equals(FruitFavourites.getListItem1())){
-                            filteredList.add(item)
                         }
-
                     }
 
                     //process data

@@ -11,10 +11,6 @@ class FruitFavourites {
         fun addToList(fruit: String){
             fruitFavouritesList.add(fruit)
         }
-
-        fun getListItem1(): String{
-            return fruitFavouritesList.get(0)
-        }
     }
 
     /*fun getList(): List<String>{
