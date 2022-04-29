@@ -22,31 +22,37 @@
 
         <TextView
             android:id="@+id/txtName"
+            android:textColor = "?android:textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/txtCarbs"
+            android:textColor = "?android:textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/txtProtein"
+            android:textColor = "?android:textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/txtFat"
+            android:textColor = "?android:textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/txtCalories"
+            android:textColor = "?android:textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/txtSugar"
+            android:textColor = "?android:textColorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
