@@ -93,6 +93,18 @@
         app:layout_constraintGuide_percent="0.47" />
 
     <Button
+        android:id="@+id/btnAddFavouriteRecycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btnAddFavourite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineRecycler"
+        app:layout_constraintTop_toBottomOf="@+id/txtSugarRecycler" />
+
+    <Button
         android:id="@+id/btnMoreInfoRecycler"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -102,6 +114,6 @@
         android:text="@string/btnMoreInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineRecycler"
-        app:layout_constraintTop_toBottomOf="@+id/txtSugarRecycler" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAddFavouriteRecycler" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

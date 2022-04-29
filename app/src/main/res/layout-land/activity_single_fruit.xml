@@ -92,6 +92,18 @@
             app:layout_constraintGuide_percent="0.47" />
 
         <Button
+            android:id="@+id/btnAddFavourite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/btnAddFavourite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/txtSugar" />
+
+        <Button
             android:id="@+id/btnMoreInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -101,6 +113,6 @@
             android:text="@string/btnMoreInfo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/txtSugar" />
+            app:layout_constraintTop_toBottomOf="@+id/btnAddFavourite" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
