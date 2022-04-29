@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.example.fruityfacts.api.FruitService
 import com.example.fruityfacts.api.ServiceBuilder
 import com.example.fruityfacts.data.Fruit
+import com.example.fruityfacts.data.FruitFavourites
 import com.example.fruityfacts.data.FruitImages
 import retrofit2.Call
 import retrofit2.Callback
@@ -53,6 +54,13 @@ class SingleFruitActivity : AppCompatActivity(), SensorEventListener {
                 data = Uri.parse(url)
             }
             startActivity(intent)
+        }
+
+        //save favourite
+        val btnAddFavourite: Button = findViewById(R.id.btnAddFavourite)
+        btnAddFavourite.setOnClickListener {
+            FruitFavourites().fruitFavouritesList.add(fruitId)
+
         }
 
         loadData(fruitId)

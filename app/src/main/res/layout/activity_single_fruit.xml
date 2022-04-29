@@ -57,6 +57,12 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/btnAddFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAddFavourite" />
+
+        <Button
             android:id="@+id/btnMoreInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
