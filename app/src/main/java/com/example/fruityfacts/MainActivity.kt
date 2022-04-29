@@ -44,6 +44,12 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             val filterFruitIntent = Intent(this, FilterFruitActivity::class.java)
             startActivity(filterFruitIntent)
         }
+
+        /*val btnGoToFavourites: Button = findViewById(R.id.btnGoToFavourites)
+        btnGoToFavourites.setOnClickListener {
+            val favouritesIntent = Intent(this, FavouritesActivity::class.java)
+            startActivity(favouritesIntent)
+        }*/
         
     }
 

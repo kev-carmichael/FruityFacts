@@ -13,5 +13,6 @@
     <string name="lblSugar">Sugar</string>
     <string name="btnFindFruit">Find Fruit</string>
     <string name="btnAddFavourite">Favourite</string>
+    <string name="btnGoToFavourites">Favourites</string>
     <string name="range">Range: </string>
 </resources>
