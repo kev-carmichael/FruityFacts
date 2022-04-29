@@ -9,6 +9,7 @@ import com.example.fruityfacts.api.FruitService
 import com.example.fruityfacts.api.ServiceBuilder
 import com.example.fruityfacts.data.Fruit
 import com.example.fruityfacts.data.FruitFavourites
+import com.example.fruityfacts.ui.FavouritesAdapter
 import com.example.fruityfacts.ui.FilterResultAdapter
 import retrofit2.Call
 import retrofit2.Callback
@@ -46,7 +47,7 @@ class FavouritesActivity : AppCompatActivity() {
                     //process data
                     val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
                     recyclerView.layoutManager = GridLayoutManager(this@FavouritesActivity,1)
-                    recyclerView.adapter = FilterResultAdapter(filteredList) //was FilterResultAdapter(response.body()!!)
+                    recyclerView.adapter = FavouritesAdapter(filteredList)
 
                 }else{
                     //output alert
