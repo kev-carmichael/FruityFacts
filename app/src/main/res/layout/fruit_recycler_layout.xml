@@ -22,32 +22,38 @@
 
         <TextView
         android:id="@+id/txtNameRecycler"
-        android:layout_width="wrap_content"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
         <TextView
         android:id="@+id/txtCarbsRecycler"
-        android:layout_width="wrap_content"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
         <TextView
         android:id="@+id/txtProteinRecycler"
-        android:layout_width="wrap_content"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
         <TextView
         android:id="@+id/txtFatRecycler"
-        android:layout_width="wrap_content"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
         <TextView
         android:id="@+id/txtCaloriesRecycler"
-        android:layout_width="wrap_content"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
         <TextView
         android:id="@+id/txtSugarRecycler"
-        android:layout_width="wrap_content"
+            android:textColor = "?android:textColorPrimary"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
         <Button
