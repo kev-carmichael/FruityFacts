@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FruityFacts">
         <activity
+            android:name=".FavouritesActivity"
+            android:exported="false" />
+        <activity
             android:name=".FilterResultActivity"
             android:exported="false" />
         <activity
