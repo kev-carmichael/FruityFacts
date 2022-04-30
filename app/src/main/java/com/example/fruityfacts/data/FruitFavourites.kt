@@ -11,14 +11,8 @@ class FruitFavourites {
         fun addToList(fruit: String){
             fruitFavouritesList.add(fruit)
         }
+        fun comfirmEmpty(): Boolean{
+            return fruitFavouritesList.isEmpty()
+        }
     }
-
-    /*fun getList(): List<String>{
-        return fruitFavouritesList
-    }
-
-    fun addToList(fruit: String){
-        fruitFavouritesList.add(fruit)
-    }*/
-
 }

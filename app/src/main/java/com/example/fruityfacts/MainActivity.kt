@@ -48,8 +48,12 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
         val btnGoToFavourites: Button = findViewById(R.id.btnGoToFavourites)
         btnGoToFavourites.setOnClickListener {
-            val favouritesIntent = Intent(this, FavouritesActivity::class.java)
-            startActivity(favouritesIntent)
+            if(FruitFavourites.comfirmEmpty()){
+                Toast.makeText(this, "Favourites list is empty", Toast.LENGTH_SHORT).show()
+            } else{
+                val favouritesIntent = Intent(this, FavouritesActivity::class.java)
+                startActivity(favouritesIntent)
+            }
         }
         
     }
@@ -79,5 +83,4 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
-
 }
