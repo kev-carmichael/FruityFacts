@@ -39,12 +39,6 @@ class FilterResultActivity : AppCompatActivity(), SensorEventListener {
             // not required
         }
 
-        //save favourite
-        /*val btnAddFavourite: Button = findViewById(R.id.btnAddFavourite)
-        btnAddFavourite.setOnClickListener {
-            FruitFavourites.addToList(fruitId)
-        }*/
-
         loadData()
     }
 
