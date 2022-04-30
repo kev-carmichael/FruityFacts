@@ -42,6 +42,7 @@
         android:layout_marginEnd="8dp"
         android:gravity="center_horizontal"
         android:text="@string/lblSelectFruitBy"
+        android:textColor="@color/green_light"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/verticalguideline"
@@ -77,5 +78,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/verticalguideline"
         app:layout_constraintTop_toBottomOf="@+id/btnName" />
+
+    <Button
+        android:id="@+id/btnGoToFavourites"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btnGoToFavourites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@+id/btnNutritionalValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

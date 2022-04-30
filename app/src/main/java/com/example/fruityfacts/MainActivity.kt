@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         val btnGoToFavourites: Button = findViewById(R.id.btnGoToFavourites)
         btnGoToFavourites.setOnClickListener {
             if(FruitFavourites.comfirmEmpty()){
-                Toast.makeText(this, "Favourites list is empty", Toast.LENGTH_SHORT).show()
+              Toast.makeText(this, "Favourites list is empty", Toast.LENGTH_SHORT).show()
             } else{
                 val favouritesIntent = Intent(this, FavouritesActivity::class.java)
                 startActivity(favouritesIntent)
