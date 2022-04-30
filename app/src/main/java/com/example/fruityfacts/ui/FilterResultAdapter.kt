@@ -1,14 +1,18 @@
 package com.example.fruityfacts.ui
 
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fruityfacts.MainActivity
 import com.example.fruityfacts.R
+import com.example.fruityfacts.SingleFruitActivity
 import com.example.fruityfacts.data.Fruit
 import com.example.fruityfacts.data.FruitFavourites
 import com.example.fruityfacts.data.FruitImages
@@ -25,6 +29,7 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
         val txtCaloriesRecycler: TextView = view.findViewById(R.id.txtCaloriesRecycler)
         val txtSugarRecycler: TextView = view.findViewById(R.id.txtSugarRecycler)
         val btnAddFavouriteRecycler: Button = view.findViewById(R.id.btnAddFavouriteRecycler)
+        val btnMoreInfoRecycler: Button = view.findViewById(R.id.btnMoreInfoRecycler)
     }
 
     override fun getItemCount() = fruitList.size
@@ -49,14 +54,15 @@ class FilterResultAdapter (private val fruitList: List<Fruit>) :
             FruitFavourites.addToList(theFruit.name)
         }
 
+        holder.btnMoreInfoRecycler.setOnClickListener {
+            val url: String = SingleFruitActivity.SEARCH_PREFIX +
+                    theFruit.name + SingleFruitActivity.SEARCH_POSTFIX
 
-
-        // **************Try for implciit intent to connect internet
-        /*holder.itemView.setOnClickListener { v ->
-            val intent = Intent(v.context, QuestionsActi::class.java)
-            v.context.startActivity(intent)
-        }*/
-
-
+            val intent: Intent = Intent().apply {
+                action = Intent.ACTION_VIEW
+                data = Uri.parse(url)
+            }
+            startActivity(holder.btnMoreInfoRecycler.context, intent, null)
+        }
     }
 }
