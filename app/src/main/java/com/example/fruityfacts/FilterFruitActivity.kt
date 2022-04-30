@@ -64,8 +64,8 @@ class FilterFruitActivity : AppCompatActivity(), SensorEventListener {
                 putExtra("MAXPROTEIN", maxProtein)
                 putExtra("MINFAT", minFat)
                 putExtra("MAXFAT", maxFat)
-                putExtra("MINCALORIES", minCalories.toInt())//removed .toString()
-                putExtra("MAXCALORIES", maxCalories.toInt())//removed .toString()
+                putExtra("MINCALORIES", minCalories.toInt())
+                putExtra("MAXCALORIES", maxCalories.toInt())
                 putExtra("MINSUGAR", minSugar)
                 putExtra("MAXSUGAR", maxSugar)
             }

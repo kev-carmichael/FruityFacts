@@ -8,6 +8,7 @@ import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.GridLayoutManager
@@ -96,11 +97,14 @@ class FilterResultActivity : AppCompatActivity(), SensorEventListener {
                             filteredList.add(item)
                         }
                     }
-
-                    //process data
-                    val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-                    recyclerView.layoutManager = GridLayoutManager(this@FilterResultActivity,1)
-                    recyclerView.adapter = FilterResultAdapter(filteredList) //was FilterResultAdapter(response.body()!!)
+                    if(filteredList.isEmpty()){
+                        showToast()
+                    } else{
+                        //process data
+                        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+                        recyclerView.layoutManager = GridLayoutManager(this@FilterResultActivity,1)
+                        recyclerView.adapter = FilterResultAdapter(filteredList)
+                    }
 
                 }else{
                     //output alert
@@ -122,6 +126,10 @@ class FilterResultActivity : AppCompatActivity(), SensorEventListener {
                     .show()
             }
         })
+    }
+
+    fun showToast(){
+        Toast.makeText(this, "No fruit for values selected", Toast.LENGTH_LONG).show()
     }
 
 
